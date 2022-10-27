@@ -11,6 +11,7 @@ const Favorites = ({state,send}) => {
 
   return (
     <>
+    <h2 className='Favorites-title'>My Marvel's Favorite Characters</h2>
     <span className='Favorites-container_back'
     
     onClick={handleOnClick}>⬅</span>

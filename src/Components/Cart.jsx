@@ -1,6 +1,7 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect } from 'react';
+import '../Styles';
 
-const Cart = ({ character, send, state }) => {
+const Home = ({ character, send, state }) => {
 
 
   const [isFavorite, setIsFavorite] = useState(false);
@@ -68,7 +69,7 @@ const Cart = ({ character, send, state }) => {
   )
 }
 
-export { Cart }
+export { Home }
 
 
 

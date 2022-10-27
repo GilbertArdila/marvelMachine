@@ -1,0 +1,43 @@
+.Character-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+}
+.Character-container_back{
+    position: relative;
+    bottom: 0;
+    width: 48px;
+    height: 48px;
+    right:calc(-80%);
+    cursor: pointer;
+}
+.Character-container_back::after{
+    content: 'Back';
+}
+.Character-container_name{
+    margin: 10px auto;
+}
+.Character-container_image{
+    width: 90%;
+    max-width: 550px;
+    height: 70%;
+    max-height: 400px;
+    margin: 0 auto;
+}
+.Character-container_description{
+    width: 90%;
+    font-family: monospace;
+    margin: 10px auto;
+}
+
+.Character-container_comicsContent{
+    color: black;
+    font-weight: 600;
+}
+.Character-container_comics{
+    color: red;
+    font-weight: bold;
+}
