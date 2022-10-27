@@ -7,12 +7,13 @@ const Cart = ({character,send,state}) => {
     const [pushFavorite, setPushFavorite] = useState(character);
 
    const handleOnClick=()=>{
-   
-   
         send('SETFAVORITES',{newFavorite:pushFavorite})
-       
         console.log(state.context)
-      
+    }
+
+    const handleSelectedCharacter=()=>{
+      send('CHARACTER',{myCharacter:character})
+      console.log(state.context)
     }
 
     let star;
@@ -24,7 +25,9 @@ const Cart = ({character,send,state}) => {
       className='Home-container_image'
       src={`${character.thumbnail.path
     }.${character.thumbnail.extension}`}
-     alt={character.name}/>
+     alt={character.name}
+     onClick={handleSelectedCharacter}
+     />
      <img 
      className='Home-container_star'
      src={star} alt='agregar a favoritos'

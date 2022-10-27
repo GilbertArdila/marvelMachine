@@ -4,6 +4,7 @@ import '../Styles';
 import {Cart} from './Cart';
 
 const Home = ({send,state}) => {
+  console.log(state.context)
 
 const [charactersData, setCharactersData] = useState([]);
  const {characters}=state.context

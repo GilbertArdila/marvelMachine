@@ -36,13 +36,15 @@ const marvelMachine=createMachine({
     context:{
         characters:[],
         favorites:[],
+        selectedCharacter:[],
         error:''
     },
     states:{
         home:{
             on:{
                 CHARACTER:{
-                    target:'selectedCharacter'
+                    target:'selectedCharacter',
+                    actions:'addSelectedCharacter'
                 },
                 SETFAVORITES:{
                     target:'home',
@@ -50,18 +52,16 @@ const marvelMachine=createMachine({
                 },
                 FAVORITES:{
                    target:'favotitesCharacters'
-                },
-                DELETE:{
-                    target:'home',
-                    actions:' deleteFavorite'
                 }
+                
             },
             ...fillCharacters
         },
         selectedCharacter:{
             on:{
                 BACK:{
-                    target:'home'
+                    target:'home',
+                    actions:'deleteSelectedCharacter'
                 }
             }
         },
@@ -81,9 +81,11 @@ const marvelMachine=createMachine({
         (context,event)=>context.favorites.push(event.newFavorite)
         
     ),
-    deleteFavorite:assign((id)=>{
-      const index=  context.favorites.findIndex(index=>index===id);
-      return context.splice(index,1)
+    addSelectedCharacter:assign(
+       (context,event)=>context.selectedCharacter.push(event.myCharacter)
+    ),
+    deleteSelectedCharacter:assign((context)=> {
+        context.selectedCharacter=[]
     })
  }
 }
