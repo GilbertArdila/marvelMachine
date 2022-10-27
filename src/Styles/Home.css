@@ -6,6 +6,23 @@
     height: 100px;
     border: 1px solid black;
 }
+.Nav-container{
+    display: flex;
+    flex-direction: column;
+
+}
+.Nav-hammer{
+    width: 48px;
+    height: 48px;
+}
+.nav-favorites{
+    font-weight: 800;
+    font-family: monospace;
+    cursor: pointer;
+}
+.Nav-title{
+    margin: 0 auto;
+}
 .Home{
     display: grid;
     grid-template-columns:repeat(auto-fill, minmax(350px, 1fr));
@@ -13,7 +30,8 @@
     height: 100vh;
 }
 .Home-container,
-.Character-container{
+.Character-container,
+.Favorites-container{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -29,10 +47,12 @@
 }
 
 .Home-container_image,
-.Character-container_image{
+.Character-container_image,
+.Favorites-container_image{
     width: 90%;
     height: 70%;
     margin: 0 auto;
+    cursor: pointer;
 }
 .Character-container_image{
   max-width: 450px;
@@ -48,7 +68,11 @@
     border-radius: 50%;
     cursor: pointer;
 }
-.Character-container_back{
+.Home-container_star:hover{
+    transform: scale(0.8);
+}
+.Character-container_back,
+.Favorites-container_back{
     position: relative;
     bottom: 0;
     width: 48px;
@@ -57,11 +81,13 @@
     cursor: pointer;
    
 }
-.Character-container_back::after{
+.Character-container_back::after,
+.Favorites-container_back::after{
     content: 'Back';
 }
 .Home-container_name,
-.Character-container_name{
+.Character-container_name,
+.Favorites-container_name{
     margin: 10px auto;
 }
 .Character-container_name,

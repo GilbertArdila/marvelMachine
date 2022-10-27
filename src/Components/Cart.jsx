@@ -7,6 +7,8 @@ const Cart = ({ character, send, state }) => {
   const [pushFavorite, setPushFavorite] = useState(character);
   const{favorites}=state.context;
 
+
+  //checking favorites list to set or unset isFavorite state
  useEffect(() => {
   if(favorites.length > 0){
     favorites.map((favorite)=>{
@@ -32,11 +34,14 @@ const Cart = ({ character, send, state }) => {
 
   const handleSelectedCharacter = () => {
     send('CHARACTER', { myCharacter: character })
-    console.log(state.context)
+    
   }
 
+  //setting the image according to the isFavorite state
   let star;
   !isFavorite ? star = '../../public/emptyStar.webp' : star = '../../public/fullfilledStar.webp';
+
+  
   return (
     <div className="Home-container"
     >
