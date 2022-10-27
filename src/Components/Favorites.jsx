@@ -14,7 +14,8 @@ const Favorites = ({state,send}) => {
     <span className='Favorites-container_back'
     
     onClick={handleOnClick}>⬅</span>
-    {favorites.map((character)=>(
+    <div className="Favorites">
+        {favorites.map((character)=>(
       <div className="Favorites-container"
       key={character.id}
       >
@@ -29,6 +30,8 @@ const Favorites = ({state,send}) => {
         <h2 className='Favorites-container_name'>{character.name}</h2>
       </div>
     ))}
+    </div>
+  
     
     
     

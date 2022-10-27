@@ -52,6 +52,10 @@ const marvelMachine=createMachine({
                 },
                 FAVORITES:{
                    target:'favoritesCharacters'
+                },
+                PULLOUTFAVORITE:{
+                    target:'home',
+                    actions:'pullOutFavorite'
                 }
                 
             },
@@ -86,6 +90,9 @@ const marvelMachine=createMachine({
     ),
     deleteSelectedCharacter:assign((context)=> {
         context.selectedCharacter=[]
+    }),
+    pullOutFavorite:assign((context,event)=>{
+        context.favorites=event.newFavoritesArray
     })
  }
 }

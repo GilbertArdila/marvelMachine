@@ -23,7 +23,8 @@
 .Nav-title{
     margin: 0 auto;
 }
-.Home{
+.Home,
+.Favorites{
     display: grid;
     grid-template-columns:repeat(auto-fill, minmax(350px, 1fr));
     max-width: 100vw;

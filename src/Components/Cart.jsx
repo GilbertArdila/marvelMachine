@@ -26,8 +26,10 @@ const Cart = ({ character, send, state }) => {
     setIsFavorite(!isFavorite)
     if(!isFavorite){
        send('SETFAVORITES', { newFavorite: pushFavorite })
-       
-
+    }else{
+      const newArray= favorites.filter((favorite)=>favorite.id !== character.id)
+      
+      send('PULLOUTFAVORITE',{newFavoritesArray:newArray})
     }
     
   }
