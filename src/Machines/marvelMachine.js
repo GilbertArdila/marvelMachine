@@ -51,7 +51,7 @@ const marvelMachine=createMachine({
                     actions:'setFavorites'
                 },
                 FAVORITES:{
-                   target:'favotitesCharacters'
+                   target:'favoritesCharacters'
                 }
                 
             },
@@ -65,7 +65,7 @@ const marvelMachine=createMachine({
                 }
             }
         },
-        favotitesCharacters:{
+        favoritesCharacters:{
             on:{
                 BACK:{
                     target:'home'

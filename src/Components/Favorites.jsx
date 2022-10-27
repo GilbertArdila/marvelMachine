@@ -1,6 +1,9 @@
 import React from 'react'
 
-const Favorites = () => {
+const Favorites = ({state,send}) => {
+
+  const{favorites}=state.context;
+  console.log(favorites)
   return (
     <div>Favorites</div>
   )

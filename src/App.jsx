@@ -1,5 +1,4 @@
 import { BaseLayout } from './Containers/BaseLayout'
-import './App.css';
 
 function App() {
 

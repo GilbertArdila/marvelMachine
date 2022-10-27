@@ -1,10 +1,9 @@
 import React,{useState,useEffect} from 'react';
-
-import '../Styles';
+import { Nav } from './Nav';
 import {Cart} from './Cart';
+import '../Styles';
 
 const Home = ({send,state}) => {
-  console.log(state.context)
 
 const [charactersData, setCharactersData] = useState([]);
  const {characters}=state.context
@@ -20,6 +19,8 @@ setCharactersData(characters.data.data.results)
  
  
   return (
+    <>
+    <Nav send={send} state={state}/>
     <div className='Home'>
     {characters.length===0 && <p>...cargando</p>}
     {charactersData.map((character)=>(
@@ -33,6 +34,7 @@ setCharactersData(characters.data.data.results)
     ))}
 
     </div>
+    </>
   )
 }
 
