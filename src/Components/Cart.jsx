@@ -42,7 +42,7 @@ const Cart = ({ character, send, state }) => {
 
   //setting the image according to the isFavorite state
   let star;
-  !isFavorite ? star = '../../public/emptyStar.webp' : star = '../../public/fullfilledStar.webp';
+  !isFavorite ? star = 'emptyStar.webp' : star = 'fullfilledStar.webp';
 
   
   return (
