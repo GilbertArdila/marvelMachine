@@ -1,3 +1,7 @@
+.Layout{
+    display: flex;
+    flex-direction: column;
+}
 .Nav{
     display: flex;
     justify-content: space-around;
@@ -22,6 +26,12 @@
 }
 .Nav-title{
     margin: 0 auto;
+}
+.Searcher{
+    width: 150px;
+    padding: 5px;
+    margin: 10px auto;
+    text-align: center;
 }
 .Home,
 .Favorites{
