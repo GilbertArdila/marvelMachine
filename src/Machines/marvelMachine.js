@@ -38,6 +38,7 @@ const marvelMachine=createMachine({
         favorites:[],
         selectedCharacter:[],
         error:''
+        
     },
     states:{
         home:{

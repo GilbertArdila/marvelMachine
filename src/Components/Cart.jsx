@@ -3,6 +3,8 @@ import '../Styles';
 
 const Cart = ({ character, send, state }) => {
 
+let title;
+character.name!==undefined?title=character.name:title=character.title;
 
   const [isFavorite, setIsFavorite] = useState(false);
   const [pushFavorite, setPushFavorite] = useState(character);
@@ -52,7 +54,7 @@ const Cart = ({ character, send, state }) => {
         className='Home-container_image'
         src={`${character.thumbnail.path
           }.${character.thumbnail.extension}`}
-        alt={character.name}
+        alt={title}
         onClick={handleSelectedCharacter}
       />
       <img
@@ -64,7 +66,7 @@ const Cart = ({ character, send, state }) => {
       />
 
 
-      <h2 className='Home-container_name'>{character.name}</h2>
+      <h2 className='Home-container_name'>{title}</h2>
     </div>
   )
 }
